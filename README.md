@@ -1,16 +1,21 @@
-# linebot
+linebot
+===============
 
 
-###quickreplay機能
+quickreplay機能
+----------------
 
-今回のquickreplayの機能は一番簡易的な機能になります。
-「クイックリプライ」と入力するとquickreplayを動作させるようにしました。
+今回のquickreplayの機能は一番簡易的な機能になります。  
+「クイックリプライ」と入力するとquickreplayを動作させるようにしました。  
 
-[変更点]
-Callbackクラスの中に以下の文を追加する。なお、importは必要に応じて追加する。</br>
+【変更点】  
+
+クイックリプライ」と入力するとquickreplayを動作させるようにしました。  
+
+Callbackクラスの中に以下の文を追加する。なお、importは必要に応じて追加する。  
 ※importする際にpom.xml内のSpring Bootのバージョンを全て2.1.0に変更する必要がある。
 
-```java
+```
  //quickreplayの機能
     @GetMapping("quickreplay")
     public Message get() {
@@ -46,10 +51,10 @@ Callbackクラスの中に以下の文を追加する。なお、importは必要
     }
     ```
     
-    ###また、入力した文章に対してメソッドを呼び出すための文を追記する。
-    また、ここも変更する。
+以下の文も変更する。  
+------------------    
     
-    ```java
+    ```
         // 文章で話しかけられたとき（テキストメッセージのイベント）に対応する
     @EventMapping
     public Message handleMessage(MessageEvent<TextMessageContent> event) {
