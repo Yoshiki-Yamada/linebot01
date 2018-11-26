@@ -16,9 +16,6 @@ Callbackクラスの中に以下の文を追加する。なお、importは必要
 ※importする際にpom.xml内のSpring Bootのバージョンを全て2.1.0に変更する必要がある。変更しないとimportされずエラーが出てしまう。
 
 ```java
-
-
-
  //quickreplayの機能
     @GetMapping("quickreplay")
     public Message get() {
@@ -85,11 +82,3 @@ Callbackクラスの中に以下の文を追加する。なお、importは必要
                 return reply(text);
         }
     }
-    
-    
-    
-    
-    
-    
-    
-    
