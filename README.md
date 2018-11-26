@@ -1,6 +1,6 @@
-#linebot
-
-##quickreplay機能の追加
+# Linebot
+これは、LinebotによるIoTの実現を目標に作成しているものである。
+## Quickreplay機能の追加
 
 今回のquickreplayの機能は一番簡易的な機能になります。  
 「クイックリプライ」と入力するとquickreplayを動作させるようにする。　　
@@ -49,6 +49,9 @@ Callbackクラスの中に以下の文を追加する。なお、importは必要
                 .build();
     }
 ```
+この文の`QuickReplyItem.builder().action(CameraRollAction.withLabel("**********"))`の**********　には
+アイコンに表示したい内容を入れる。
+
 さらに、`Callback.java`の中にある`handleMessage`メソッドに以下の文を追加する。
 ```java:Callback.java
 // 文章で話しかけられたとき（テキストメッセージのイベント）に対応する
@@ -80,3 +83,5 @@ Callbackクラスの中に以下の文を追加する。なお、importは必要
         }
     }
 ```
+
+これで、`handleMessage`メソッドで「クイックリプライ」と入力することによって、`get()`が呼び出される。　　
