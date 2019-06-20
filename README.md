@@ -1,5 +1,5 @@
 # Linebot
-これは、LinebotによるIoTの実現を目標に作成しているものである。
+
 ## Quickreplay機能の追加
 
 今回のquickreplayの機能は一番簡易的な機能になります。  
